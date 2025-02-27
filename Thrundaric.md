@@ -1,7 +1,12 @@
 # Thrundaric Language System Enhancements
 
+## 0 Event-Driven Architecture Enhancements  
+currently the application is all built through the UI. this is fine for now, but would be nice to have my infrastructure as code for more thorough testing of expected behaviors. especially for the AI/prompt engineering spaces.
+- [ ] **Choose an IAC technology** Terraform, SAM, CDK, CDK For Terraform all have their advantages and disadvantages  
+- [ ] **Rewrite and deploy infrastructure** 
+- [ ] **Containerize and deploy application logic**
+
 ## 1 Event-Driven Architecture Enhancements  
-Since you're using **EventBridge**, ensure the following:  
 - [ ] **Refactor Lambdas** to process batched events instead of single entries (better performance)  
 - [ ] **Dead Letter Queue (DLQ)** for failed events (AWS SQS or SNS)  
 - [ ] **Monitoring & Logging** (AWS CloudWatch to track ingestion issues)  
@@ -16,9 +21,8 @@ Once words and rules are stored, **you need a way to retrieve and use them**:
 An AI **agent** that interacts with the API to manage language creation and retrieval:  
 - [ ] **Conversational API Access** (Chat-based interaction for querying Thrundaric rules, words, or grammar)  
 - [ ] **Automated Word Suggestion** (AI suggests new words following phonotactic rules)  
-- [ ] **Grammar & Syntax Validation** (AI verifies whether a sentence is grammatically correct)  
-- [ ] **Query Expansion** (Understands user intent, reformulates queries for deeper analysis)  
-- [ ] **Adaptive Learning** (Learns new linguistic patterns from user interactions)  
+- [ ] **Grammar & Syntax Validation** (AI verifies whether a sentence is grammatically correct)
+- [ ] **Common English to Thrundaric Conversion** (AI can translate sentances into Thrundaric on demand)
 
 ## 4 Word Formation & Generation  
 A dynamic **word generator** can ensure consistency when adding new words:  
